@@ -36,6 +36,7 @@ def selective_tweet_shortener(tweet)
   end 
 end 
 
+<<<<<<< HEAD
 def bulk_tweet_shortener(tweets_array)
   tweets_array.collect do |tweet|
     puts word_substituter(tweet)
@@ -51,4 +52,16 @@ def shortened_tweet_truncator(tweet)
     word_substituter(tweet) 
   end 
 end 
+=======
+def shortened_tweet_truncator(tweet)
+  if tweet.chars.length > 140  
+    word_substituter(tweet)
+  else 
+    tweet[1..136].push("...").join("")
+  end 
+end 
+
+
+
+>>>>>>> e3f11d117eb15ad1f798ef621517439ee7c8960c
   
